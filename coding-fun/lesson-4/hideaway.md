@@ -13,7 +13,7 @@ Program the Agent to plant **3** blocks of bamboo on each side of the sand patch
 #### ~ tutorialhint
 There should be 2 **repeat** loops, one nested inside the other.
  
-```ghost
+```spy
 player.onChat("bamboo", function () {
     for (let index = 0; index < 3; index++) {
         agent.setItem(BAMBOO, 64, 1)
