@@ -7,7 +7,7 @@
 ## Step 1
 No code is required for this activity. 
 
-```template
+```spy
 player.onChat("run", function () {
 })
 ```
