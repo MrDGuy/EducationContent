@@ -13,15 +13,7 @@ Program the Agent to dig a path without knowing how far it goes by using ``||loo
 #### ~ tutorialhint 
 Look at the coding snippets shapes when you snap them together. Use ``||agent:agent move forward||``.
 
-```template
-player.onChat("cub", function () {
-    while (agent.detect(AgentDetection.Block, FORWARD)) {
-    	
-    }
-})
-```
-
-```ghost
+```spy
 player.onChat("cub", function () {
     while (agent.detect(AgentDetection.Block, FORWARD)) {
         agent.destroy(FORWARD)
