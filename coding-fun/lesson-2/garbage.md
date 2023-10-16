@@ -12,7 +12,7 @@
 Use the Agent to clear the turtle tracks by using ``||agent: agent destroy||`` & ``||agent:agent collect all||``blocks. Try using a ``||loops:repeat||`` block to make the code more efficient. When done, press the **Play** button to compile the code. Don't forget to run your code in Minecraft. 
 
 
-```ghost
+```spy
 player.onChat("garbage", function () {
     for (let index = 0; index < 4; index++) {
         agent.turn(LEFT_TURN)
