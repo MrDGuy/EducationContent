@@ -1,7 +1,7 @@
 ### @codeStart players set @s makecode 0
 ### @codeStop players set @s makecode 1
 
-### @hideIteration true 
+### @hideIteration false 
 ### @flyoutOnly 1
 ### @explicitHints 1
 ### @diffs true
@@ -410,3 +410,31 @@ def on_chat(width, height, length):
     wood_roof(width, height, length, player.position())
 player.on_chat("house", on_chat)
 ```
+
+```ghost
+function base(width3: number, height3: number, length3: number, position3: any) {
+    blocks.fill(STONE_BRICKS, positions.add(position3, pos(width3 * -1, -1, length3 * -1)), positions.add(position3, pos(width3, height3, length3)), FillOperation.Hollow)
+    blocks.fill(GLASS, positions.add(position3, pos(width3 * -1, 2, length3 * -1 + 3)), positions.add(position3, pos(width3 * -1, 4, length3 - 3)), FillOperation.Hollow)
+    blocks.fill(GLASS, positions.add(position3, pos(width3, 2, length3 * -1 + 3)), positions.add(position3, pos(width3, 4, length3 - 3)), FillOperation.Hollow)
+    blocks.fill(AIR, positions.add(position3, pos(0, 0, length3)), positions.add(position3, pos(0, 1, length3)), FillOperation.Hollow)
+}
+
+function wood_roof(width2: number, height2: number, length2: number, position2: any) {
+    let loop_num: number;
+    if (width2 < length2) {
+        loop_num = width2
+    } else {
+        loop_num = length2
+    }
+    
+    for (let i = 0; i < loop_num; i++) {
+        blocks.fill(LOG_SPRUCE, positions.add(position2, pos(width2 * -1 + i - 1, height2 + i, length2 * -1 + i - 1)), positions.add(position2, pos(width2 - i + 1, height2 + i, length2 - i + 1)), FillOperation.Hollow)
+    }
+}
+
+player.onChat("house", function on_chat(width: number, height: number, length: number) {
+    base(width, height, length, player.position())
+    wood_roof(width, height, length, player.position())
+})
+```
+
