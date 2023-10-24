@@ -6,54 +6,407 @@
 ### @explicitHints 1
 ### @diffs true
 
-# Chess Board: Python
+# Custom House: Python
 
 ## Step 1
-Code a ``||functions:function||`` and name it **base**. 
+Make a ``||functions:function||`` and name it **base**. Give the function three parameters: **width3**, **height3**, **length3**, and **position3**.
 
 ```python
-def prismStone(width3, length3, height3, position3):
-    blocks.fill(STONE_BRICKS,
-        positions.add(position3, pos(width3 * -1, -1, length3 * -1)),
-        positions.add(position3, pos(width3, height3, length3)), 
-        FillOperation.HOLLOW)
-    blocks.fill(GLASS,
-        positions.add(position3, pos(width3 * -1, 2, length3 * -1 + 3)),
-        positions.add(position3, pos(width3 * -1, 4, length3 - 3)),
-        FillOperation.HOLLOW)
-    blocks.fill(GLASS,
-        positions.add(position3, pos(width3, 2, length3 * -1 + 3)),
-        positions.add(position3, pos(width3, 4, length3 - 3)),
-        FillOperation.HOLLOW)
-    blocks.fill(AIR,
-        positions.add(position3, pos(0, 0, length3)),
-        positions.add(position3, pos(0, 1, length3)),
-        FillOperation.REPLACE)
+def base(width3, height3, length3, position3):
+    pass
 ```
 
 ## Step 2
-Beneath the **base** function, Code a ``||functions:function||`` and name it **wood_roof**. 
+Drag a ``||blocks:fill with||`` code and change the **GRASS** to **STONE_BRICKS** and **FillOperation.REPLACE** to **FillOperation.HOLLOW**
+
 ```python
-def wood_roof(width2, length2, height2, position2):
-    loopNum = 0
-    if width2 < length2:
-        loopNum = width2
-    else:
-        loopNum = length2
-    index = 0
-    while index <= loopNum:
-        blocks.fill(LOG_SPRUCE,
-            positions.add(position2, pos(width2 * -1 + index - 1, height2 + index, length2 * -1 + index -1)),
-            positions.add(position2, pos(width2 - index + 1, height2 + index, length2 - index + 1)),
-            FillOperation.HOLLOW)
-        index += 1
+def base(width3, height3, length3, position3):
+    blocks.fill(STONE_BRICKS, pos(0, 0, 0), pos(0, 0, 0), FillOperation.HOLLOW)
 ```
 
 ## Step 3
-Beneath the **wood_roof** function, Code a ``||player:run code on chat command||`` and make the chat: "house". 
+Delete the first **pos(0,0,0)** code and then drag a ``||positions:p1+p2||`` code and in its place.
+
 ```python
-def on_on_chat(width, length, height):
-    base(width, length, height, player.position())
-    wood_roof(width, length, height, player.position())
+def base(width3, height3, length3, position3):
+    blocks.fill(STONE_BRICKS, positions.add(pos(0,0,0), pos(0,0,0)), pos(0, 0, 0), FillOperation.HOLLOW)
+```
+
+## Step 4
+Change the first **pos(0, 0, 0)** in the first **positions.add()** to **position3**
+
+```python
+def base(width3, height3, length3, position3):
+    blocks.fill(STONE_BRICKS, positions.add(position3, pos(0,0,0)), pos(0, 0, 0), FillOperation.HOLLOW)
+```
+
+## Step 5
+Change the second **pos(0, 0, 0)** in the first **positions.add()** to **pos(width3 \* -1, -1, length3 \* -1)**
+
+```python
+def base(width3, height3, length3, position3):
+    blocks.fill(STONE_BRICKS, positions.add(position3, pos(width3 * -1, -1, length3 * -1)), pos(0, 0, 0), FillOperation.HOLLOW)
+```
+
+## Step 6
+Delete the second **pos(0,0,0)** code and then drag a ``||positions:p1+p2||`` code and in its place.
+
+```python
+def base(width3, height3, length3, position3):
+    blocks.fill(STONE_BRICKS, positions.add(position3, pos(width3 * -1, -1, length3 * -1)), positions.add(pos(0,0,0), pos(0,0,0)), FillOperation.HOLLOW)
+```
+
+## Step 7
+Change the first **pos(0, 0, 0)** in the second **positions.add()** to **position3**
+
+```python
+def base(width3, height3, length3, position3):
+    blocks.fill(STONE_BRICKS, positions.add(position3, pos(width3 * -1, -1, length3 * -1)), positions.add(position3, pos(0,0,0)), FillOperation.HOLLOW)
+```
+
+## Step 8
+Change the second **pos(0, 0, 0)** in the second **positions.add()** to **pos(width3, height3, length3)**
+
+```python
+def base(width3, height3, length3, position3):
+    blocks.fill(STONE_BRICKS, positions.add(position3, pos(width3 * -1, -1, length3 * -1)), positions.add(position3, pos(width3, height3, length3)), FillOperation.HOLLOW)
+```
+
+## Step 9
+Drag a ``||blocks:fill with||`` code and change the **GRASS** to **GLASS** and **FillOperation.REPLACE** to **FillOperation.HOLLOW**
+
+```python
+def base(width3, height3, length3, position3):
+    blocks.fill(STONE_BRICKS, positions.add(position3, pos(width3 * -1, -1, length3 * -1)), positions.add(position3, pos(width3, height3, length3)), FillOperation.HOLLOW)
+    blocks.fill(GLASS, pos(0, 0, 0), pos(0, 0, 0), FillOperation.HOLLOW)
+```
+
+## Step 10
+Delete the first **pos(0,0,0)** code and then drag a ``||positions:p1+p2||`` code and in its place.
+
+```python
+def base(width3, height3, length3, position3):
+    blocks.fill(STONE_BRICKS, positions.add(position3, pos(width3 * -1, -1, length3 * -1)), positions.add(position3, pos(width3, height3, length3)), FillOperation.HOLLOW)
+    blocks.fill(GLASS, positions.add(pos(0,0,0), pos(0,0,0)), pos(0, 0, 0), FillOperation.HOLLOW)
+```
+
+## Step 11
+Change the first **pos(0, 0, 0)** in the first **positions.add()** to **position3**
+
+```python
+def base(width3, height3, length3, position3):
+    blocks.fill(STONE_BRICKS, positions.add(position3, pos(width3 * -1, -1, length3 * -1)), positions.add(position3, pos(width3, height3, length3)), FillOperation.HOLLOW)
+    blocks.fill(GLASS, positions.add(position3, pos(0,0,0)), pos(0, 0, 0), FillOperation.HOLLOW)
+```
+
+## Step 12
+Change the second **pos(0, 0, 0)** in the first **positions.add()** to **pos(width3 \* -1, 2, length3 \* -1 + 3)**
+
+```python
+def base(width3, height3, length3, position3):
+    blocks.fill(STONE_BRICKS, positions.add(position3, pos(width3 * -1, -1, length3 * -1)), positions.add(position3, pos(width3, height3, length3)), FillOperation.HOLLOW)
+    blocks.fill(GLASS, positions.add(position3, pos(width3 * -1, 2, length3 * -1 + 3)), pos(0, 0, 0), FillOperation.HOLLOW)
+```
+
+## Step 13
+Delete the second **pos(0,0,0)** code and then drag a ``||positions:p1+p2||`` code and in its place.
+
+```python
+def base(width3, height3, length3, position3):
+    blocks.fill(STONE_BRICKS, positions.add(position3, pos(width3 * -1, -1, length3 * -1)), positions.add(position3, pos(width3, height3, length3)), FillOperation.HOLLOW)
+    blocks.fill(GLASS, positions.add(position3, pos(width3 * -1, -1, length3 * -1)), positions.add(pos(0,0,0), pos(0,0,0)), FillOperation.HOLLOW)
+```
+
+## Step 14
+Change the first **pos(0, 0, 0)** in the second **positions.add()** to **position3**
+
+```python
+def base(width3, height3, length3, position3):
+    blocks.fill(STONE_BRICKS, positions.add(position3, pos(width3 * -1, -1, length3 * -1)), positions.add(position3, pos(width3, height3, length3)), FillOperation.HOLLOW)
+    blocks.fill(GLASS, positions.add(position3, pos(width3 * -1, -1, length3 * -1)), positions.add(position3, pos(0,0,0)), FillOperation.HOLLOW)
+```
+
+## Step 15
+Change the second **pos(0, 0, 0)** in the second **positions.add()** to **pos(width3 * -1, 4, length3 - 3)**
+
+```python
+def base(width3, height3, length3, position3):
+    blocks.fill(STONE_BRICKS, positions.add(position3, pos(width3 * -1, -1, length3 * -1)), positions.add(position3, pos(width3, height3, length3)), FillOperation.HOLLOW)
+    blocks.fill(GLASS, positions.add(position3, pos(width3 * -1, -1, length3 * -1)), positions.add(position3, pos(width3 * -1, 4, length3 - 3)), FillOperation.HOLLOW)
+```
+
+## Step 16
+Copy the **blocks.fill(GLASS,...** and paste it beneath itself.
+
+```python
+def base(width3, height3, length3, position3):
+    blocks.fill(STONE_BRICKS, positions.add(position3, pos(width3 * -1, -1, length3 * -1)), positions.add(position3, pos(width3, height3, length3)), FillOperation.HOLLOW)
+    blocks.fill(GLASS, positions.add(position3, pos(width3 * -1, -1, length3 * -1)), positions.add(position3, pos(width3 * -1, 4, length3 - 3)), FillOperation.HOLLOW)
+    blocks.fill(GLASS, positions.add(position3, pos(width3 * -1, -1, length3 * -1)), positions.add(position3, pos(width3 * -1, 4, length3 - 3)), FillOperation.HOLLOW)
+```
+
+## Step 17
+Drag a ``||blocks:fill with||`` code and change the **GRASS** to **AIR** and **FillOperation.REPLACE** to **FillOperation.HOLLOW**
+
+```python
+def base(width3, height3, length3, position3):
+    blocks.fill(STONE_BRICKS, positions.add(position3, pos(width3 * -1, -1, length3 * -1)), positions.add(position3, pos(width3, height3, length3)), FillOperation.HOLLOW)
+    blocks.fill(GLASS, positions.add(position3, pos(width3 * -1, -1, length3 * -1)), positions.add(position3, pos(width3 * -1, 4, length3 - 3)), FillOperation.HOLLOW)
+    blocks.fill(GLASS, positions.add(position3, pos(width3, -1, length3 * -1)), positions.add(position3, pos(width3, 4, length3 - 3)), FillOperation.HOLLOW)
+    blocks.fill(AIR, pos(0, 0, 0), pos(0, 0, 0), FillOperation.HOLLOW)
+    
+```
+
+## Step 18
+Delete the first **pos(0,0,0)** code and then drag a ``||positions:p1+p2||`` code and in its place.
+
+```python
+def base(width3, height3, length3, position3):
+    blocks.fill(STONE_BRICKS, positions.add(position3, pos(width3 * -1, -1, length3 * -1)), positions.add(position3, pos(width3, height3, length3)), FillOperation.HOLLOW)
+    blocks.fill(GLASS, positions.add(position3, pos(width3 * -1, -1, length3 * -1)), positions.add(position3, pos(width3 * -1, 4, length3 - 3)), FillOperation.HOLLOW)
+    blocks.fill(GLASS, positions.add(position3, pos(width3, -1, length3 * -1)), positions.add(position3, pos(width3, 4, length3 - 3)), FillOperation.HOLLOW)
+    blocks.fill(AIR, positions.add(pos(0,0,0), pos(0,0,0)), pos(0, 0, 0), FillOperation.HOLLOW)
+```
+
+## Step 19
+Change the first **pos(0, 0, 0)** in the first **positions.add()** to **position3**
+
+```python
+def base(width3, height3, length3, position3):
+    blocks.fill(STONE_BRICKS, positions.add(position3, pos(width3 * -1, -1, length3 * -1)), positions.add(position3, pos(width3, height3, length3)), FillOperation.HOLLOW)
+    blocks.fill(GLASS, positions.add(position3, pos(width3 * -1, -1, length3 * -1)), positions.add(position3, pos(width3 * -1, 4, length3 - 3)), FillOperation.HOLLOW)
+    blocks.fill(GLASS, positions.add(position3, pos(width3, -1, length3 * -1)), positions.add(position3, pos(width3, 4, length3 - 3)), FillOperation.HOLLOW)
+    blocks.fill(AIR, positions.add(position3, pos(0,0,0)), pos(0, 0, 0), FillOperation.HOLLOW)
+```
+
+## Step 20
+Change the second **pos(0, 0, 0)** in the first **positions.add()** to **pos(0, 0, length3)**
+
+```python
+def base(width3, height3, length3, position3):
+    blocks.fill(STONE_BRICKS, positions.add(position3, pos(width3 * -1, -1, length3 * -1)), positions.add(position3, pos(width3, height3, length3)), FillOperation.HOLLOW)
+    blocks.fill(GLASS, positions.add(position3, pos(width3 * -1, -1, length3 * -1)), positions.add(position3, pos(width3 * -1, 4, length3 - 3)), FillOperation.HOLLOW)
+    blocks.fill(GLASS, positions.add(position3, pos(width3, -1, length3 * -1)), positions.add(position3, pos(width3, 4, length3 - 3)), FillOperation.HOLLOW)
+    blocks.fill(AIR, positions.add(position3, pos(0, 0, length3)), pos(0, 0, 0), FillOperation.HOLLOW)
+```
+
+## Step 21
+Delete the second **pos(0,0,0)** code and then drag a ``||positions:p1+p2||`` code and in its place.
+
+```python
+def base(width3, height3, length3, position3):
+    blocks.fill(STONE_BRICKS, positions.add(position3, pos(width3 * -1, -1, length3 * -1)), positions.add(position3, pos(width3, height3, length3)), FillOperation.HOLLOW)
+    blocks.fill(GLASS, positions.add(position3, pos(width3 * -1, -1, length3 * -1)), positions.add(position3, pos(width3 * -1, 4, length3 - 3)), FillOperation.HOLLOW)
+    blocks.fill(GLASS, positions.add(position3, pos(width3, -1, length3 * -1)), positions.add(position3, pos(width3, 4, length3 - 3)), FillOperation.HOLLOW)
+    blocks.fill(AIR, positions.add(position3, pos(0, 0, length3)), positions.add(pos(0, 0, 0),pos(0, 0, 0)), FillOperation.HOLLOW)
+```
+
+## Step 22
+Change the first **pos(0, 0, 0)** in the second **positions.add()** to **position3**
+
+```python
+def base(width3, height3, length3, position3):
+    blocks.fill(STONE_BRICKS, positions.add(position3, pos(width3 * -1, -1, length3 * -1)), positions.add(position3, pos(width3, height3, length3)), FillOperation.HOLLOW)
+    blocks.fill(GLASS, positions.add(position3, pos(width3 * -1, -1, length3 * -1)), positions.add(position3, pos(width3 * -1, 4, length3 - 3)), FillOperation.HOLLOW)
+    blocks.fill(GLASS, positions.add(position3, pos(width3, -1, length3 * -1)), positions.add(position3, pos(width3, 4, length3 - 3)), FillOperation.HOLLOW)
+    blocks.fill(AIR, positions.add(position3, pos(0, 0, length3)), positions.add(position3,pos(0, 0, 0)), FillOperation.HOLLOW)
+```
+
+## Step 23
+Change the second **pos(0, 0, 0)** in the second **positions.add()** to **pos(0, 1, length3)**
+
+```python
+def base(width3, height3, length3, position3):
+    blocks.fill(STONE_BRICKS, positions.add(position3, pos(width3 * -1, -1, length3 * -1)), positions.add(position3, pos(width3, height3, length3)), FillOperation.HOLLOW)
+    blocks.fill(GLASS, positions.add(position3, pos(width3 * -1, -1, length3 * -1)), positions.add(position3, pos(width3 * -1, 4, length3 - 3)), FillOperation.HOLLOW)
+    blocks.fill(GLASS, positions.add(position3, pos(width3, -1, length3 * -1)), positions.add(position3, pos(width3, 4, length3 - 3)), FillOperation.HOLLOW)
+    blocks.fill(AIR, positions.add(position3, pos(0, 0, length3)), positions.add(position3,pos(0, 1, length3)), FillOperation.HOLLOW)
+```
+
+## Step 24
+Beneath the **base** function, Code a ``||functions:function||`` and name it **wood_roof** with four parameters **width2**, **height2**, **length2**, and **position2**.
+```python
+def wood_roof(width2, height2, length2, position2):
+    pass
+```
+
+## Step 25
+Drag in a ``||logic: if else||`` code and change the **True** to **width2 < length2**.
+```python
+def wood_roof(width2, height2, length2, position2):
+    if width2 < length2:
+        pass
+    else:
+        pass
+```
+
+## Step 25
+When **width2 < length2** is True set **loop_num = width2**. Otherwise set **loop_num = length2**.
+```python
+def wood_roof(width2, height2, length2, position2):
+    if width2 < length2:
+        loop_num = width2
+    else:
+        loop_num = length2
+```
+
+## Step 26
+Drag in a ``||loops:for||`` loop and set the range = **loop_num**
+```python
+def wood_roof(width2, height2, length2, position2):
+    if width2 < length2:
+        loop_num = width2
+    else:
+        loop_num = length2
+    for i in range(loop_num):
+        pass
+```
+
+## Step 27
+Drag a ``||blocks:fill with||`` code to where the pass is and change the **GRASS** to **LOG_SPURE** and **FillOperation.REPLACE** to **FillOperation.HOLLOW**
+
+```python
+def wood_roof(width2, height2, length2, position2):
+    if width2 < length2:
+        loop_num = width2
+    else:
+        loop_num = length2
+    for i in range(loop_num):
+        blocks.fill(LOG_SPRUCE, pos(0, 0, 0), pos(0, 0, 0), FillOperation.HOLLOW)
+    
+```
+
+## Step 28
+Delete the first **pos(0,0,0)** code and then drag a ``||positions:p1+p2||`` code and in its place.
+
+```python
+def wood_roof(width2, height2, length2, position2):
+    if width2 < length2:
+        loop_num = width2
+    else:
+        loop_num = length2
+    for i in range(loop_num):
+        blocks.fill(SPRUCE_LOG, positions.add(pos(0,0,0), pos(0,0,0)), pos(0, 0, 0), FillOperation.HOLLOW)
+    
+```
+
+## Step 29
+Change the first **pos(0, 0, 0)** in the first **positions.add()** to **position2**
+
+```python
+def wood_roof(width2, height2, length2, position2):
+    if width2 < length2:
+        loop_num = width2
+    else:
+        loop_num = length2
+    for i in range(loop_num):
+        blocks.fill(SPRUCE_LOG, positions.add(position2, pos(0,0,0)), pos(0, 0, 0), FillOperation.HOLLOW)
+```
+
+## Step 30
+Change the second **pos(0, 0, 0)** in the first **positions.add()** to **pos(width2 \* -1 + i, height2 + i, length2 \* -1 + i - 1)**
+
+```python
+def wood_roof(width2, height2, length2, position2):
+    if width2 < length2:
+        loop_num = width2
+    else:
+        loop_num = length2
+    for i in range(loop_num):
+        blocks.fill(SPRUCE_LOG, positions.add(position2, pos(width2 * -1 + i, height2 + i, length2 * -1 + i - 1)), pos(0, 0, 0), FillOperation.HOLLOW)
+```
+
+## Step 31
+Delete the second **pos(0,0,0)** code and then drag a ``||positions:p1+p2||`` code and in its place.
+
+```python
+def wood_roof(width2, height2, length2, position2):
+    if width2 < length2:
+        loop_num = width2
+    else:
+        loop_num = length2
+    for i in range(loop_num):
+        blocks.fill(SPRUCE_LOG, positions.add(position2, pos(width2 * -1 + i, height2 + i, length2 * -1 + i - 1)), position.add(pos(0, 0, 0), pos(0, 0, 0)), FillOperation.HOLLOW)
+```
+
+## Step 32
+Change the first **pos(0, 0, 0)** in the second **positions.add()** to **position2**
+
+```python
+def wood_roof(width2, height2, length2, position2):
+    if width2 < length2:
+        loop_num = width2
+    else:
+        loop_num = length2
+    for i in range(loop_num):
+        blocks.fill(SPRUCE_LOG, positions.add(position2, pos(width2 * -1 + i, height2 + i, length2 * -1 + i - 1)), position.add(position2, pos(0, 0, 0)), FillOperation.HOLLOW)
+```
+
+## Step 33
+Change the second **pos(0, 0, 0)** in the second **positions.add()** to **pos(width2 - i + 1, height2 + i, length2 - i + 1)**
+
+```python
+def wood_roof(width2, height2, length2, position2):
+    if width2 < length2:
+        loop_num = width2
+    else:
+        loop_num = length2
+    for i in range(loop_num):
+        blocks.fill(SPRUCE_LOG, positions.add(position2, pos(width2 * -1 + i, height2 + i, length2 * -1 + i - 1)), position.add(position2, pos(width2 - i + 1, height2 + i, length2 - i + 1)), FillOperation.HOLLOW)
+```
+
+## Step 34
+Drag in a ``||player: run code on chat||`` block beneath both the base and wood_roof functions.
+```python
+def on_chat():
+    pass
+player.on_chat("jump", on_chat)
+```
+
+## Step 35
+Change the **"jump"** to **"house"** and add three parameters **width**, **height**, and **length**
+```python
+def on_chat(width, height, length):
+    pass
+player.on_chat("house", on_chat)
+```
+
+## Step 35
+Call the base function with the width, height and length parameters and then include a ``||player:player world position||`` as the fourth parameter.
+```python
+def on_chat(width, height, length):
+    base(width, height, length, player.position())
+player.on_chat("house", on_chat)
+```
+
+## Step 35
+Call the wood-roof function with the width, height and length parameters and then include a ``||player:player world position||`` as the fourth parameter.
+```python
+def on_chat(width, height, length):
+    base(width, height, length, player.position())
+    wood_roof(width, heigth, length, player.position())
+player.on_chat("house", on_chat)
+```
+
+## Step Last
+Final Complete Code:
+```python
+def base(width3, height3, length3, position3):
+    blocks.fill(STONE_BRICKS, positions.add(position3, pos(width3 * -1, -1, length3 * -1)), positions.add(position3, pos(width3, height3, length3)), FillOperation.HOLLOW)
+    blocks.fill(GLASS, positions.add(position3, pos(width3 * -1, -1, length3 * -1)), positions.add(position3, pos(width3 * -1, 4, length3 - 3)), FillOperation.HOLLOW)
+    blocks.fill(GLASS, positions.add(position3, pos(width3, -1, length3 * -1)), positions.add(position3, pos(width3, 4, length3 - 3)), FillOperation.HOLLOW)
+    blocks.fill(AIR, positions.add(position3, pos(0, 0, length3)), positions.add(position3,pos(0, 1, length3)), FillOperation.HOLLOW)
+
+def wood_roof(width2, height2, length2, position2):
+    if width2 < length2:
+        loop_num = width2
+    else:
+        loop_num = length2
+    for i in range(loop_num):
+        blocks.fill(SPRUCE_LOG, positions.add(position2, pos(width2 * -1 + i, height2 + i, length2 * -1 + i - 1)), position.add(position2, pos(width2 - i + 1, height2 + i, length2 - i + 1)), FillOperation.HOLLOW)
+
+def on_on_chat(width, height, length):
+    base(width, height, length player.position())
+    wood_roof(width, height, length, player.position())
 player.on_chat("house", on_on_chat)
 ```
