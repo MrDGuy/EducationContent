@@ -141,12 +141,12 @@ def draw_row(num, position, first_is_black, row_num):
 ```
 
 ## Step 12
-Change the parameters of the **positions.add** to start at **position** and add **pos((num + 0) * index1, 0, (num + 0) * index)**.
+Change the parameters of the **positions.add** to start at **position** and add **pos((num + 0) * i, 0, (num + 0) * row_num)**.
 
 ```python
 def draw_row(num, position, first_is_black, row_num):
     for i in range(8):
-        curr_pos = positions.add(position, pos((num + 0) * index1, 0, (num + 0) * index))
+        curr_pos = positions.add(position, pos((num + 0) * i, 0, (num + 0) * row_num))
 ```
 
 ## Step 13
@@ -155,11 +155,11 @@ Include an ``||logic:if else||`` beneath the **cur_pos** code.
 ```python
 def draw_row(num, position, first_is_black, row_num):
     for i in range(8):
-        curr_pos = positions.add(position, pos((num + 0) * index1, 0, (num + 0) * index))
-            if True:
-                pass
-            else:
-                pass
+        curr_pos = positions.add(position, pos((num + 0) * i, 0, (num + 0) * row_num))
+        if True:
+            pass
+        else:
+            pass
         
 ```
 
@@ -169,11 +169,11 @@ Change the **True** in the if statement to **i % 2 == 0**.
 ```python
 def draw_row(num, position, first_is_black, row_num):
     for i in range(8):
-        curr_pos = positions.add(position, pos((num + 0) * index1, 0, (num + 0) * index))
-            if i % 2 == 0:
-                pass
-            else:
-                pass
+        curr_pos = positions.add(position, pos((num + 0) * i, 0, (num + 0) * row_num))
+        if i % 2 == 0:
+            pass
+        else:
+            pass
         
 ```
 
@@ -183,12 +183,12 @@ For the **if i % 2 == 0** include a **chess_square(num, curr_pos, first_is_black
 ```python
 def draw_row(num, position, first_is_black, row_num):
     for i in range(8):
-        curr_pos = positions.add(position, pos((num + 0) * index1, 0, (num + 0) * index))
-            if i % 2 == 0:
-                chess_square(num, curr_pos, first_is_black)
-            else:
-                pass
-        
+        curr_pos = positions.add(position, pos((num + 0) * i, 0, (num + 0) * row_num))
+        if i % 2 == 0:
+            chess_square(num, curr_pos, first_is_black)
+        else:
+            pass
+    
 ```
 
 ## Step 16
@@ -197,12 +197,12 @@ For the **else** include a **chess_square(num, curr_pos, not first_is_black)** c
 ```python
 def draw_row(num, position, first_is_black, row_num):
     for i in range(8):
-        curr_pos = positions.add(position, pos((num + 0) * index1, 0, (num + 0) * index))
-            if i % 2 == 0:
-                chess_square(num, curr_pos, first_is_black)
-            else:
-                chess_square(num, curr_pos, not first_is_black)
-        
+        curr_pos = positions.add(position, pos((num + 0) * i, 0, (num + 0) * row_num))
+        if i % 2 == 0:
+            chess_square(num, curr_pos, first_is_black)
+        else:
+            chess_square(num, curr_pos, not first_is_black)
+    
 ```
 
 ## Step 17
@@ -211,11 +211,11 @@ Beneath the **draw_row** function drag in the ``||player: run code on chat comma
 ```python
 def draw_row(num, position, first_is_black, row_num):
     for i in range(8):
-        curr_pos = positions.add(position, pos((num + 0) * index1, 0, (num + 0) * index))
-            if i % 2 == 0:
-                chess_square(num, curr_pos, first_is_black)
-            else:
-                chess_square(num, curr_pos, not first_is_black)
+        curr_pos = positions.add(position, pos((num + 0) * i, 0, (num + 0) * row_num))
+        if i % 2 == 0:
+            chess_square(num, curr_pos, first_is_black)
+        else:
+            chess_square(num, curr_pos, not first_is_black)
 
 def on_on_chat():
     pass
@@ -311,11 +311,11 @@ def chess_square(width, location, is_black):
 
 def draw_row(num, position, first_is_black, row_num):
     for i in range(8):
-        curr_pos = positions.add(position, pos((num + 0) * index1, 0, (num + 0) * index))
-            if i % 2 == 0:
-                chess_square(num, curr_pos, first_is_black)
-            else:
-                chess_square(num, curr_pos, not first_is_black)
+        curr_pos = positions.add(position, pos((num + 0) * i, 0, (num + 0) * row_num))
+        if i % 2 == 0:
+            chess_square(num, curr_pos, first_is_black)
+        else:
+            chess_square(num, curr_pos, not first_is_black)
 
 def on_on_chat(num1):
     start_pos = player.position()
