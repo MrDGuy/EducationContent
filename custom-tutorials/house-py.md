@@ -30,7 +30,7 @@ Within the **walls** function, code a ``||loops:for||`` loop that repeats **3** 
 ```python
 def walls():
     agent.set_item(PLANKS_ACACIA, 64, 1)
-    for index in range(3):
+    for index in range(4):
         agent.move(UP, 1)
 ```
 
@@ -40,7 +40,7 @@ Code another ``||loops:for||`` loop that repeats **4** times, and drag it inside
 ```python
 def walls():
     agent.set_item(PLANKS_ACACIA, 64, 1)
-    for i in range(3):
+    for i in range(4):
         agent.move(UP, 1)
         for j in range(4):
             pass
@@ -52,7 +52,7 @@ Code a third ``||loops:for||`` loop, drag it inside the second ``||loops:repeat|
 ```python
 def walls():
     agent.set_item(PLANKS_ACACIA, 64, 1)
-    for i in range(3):
+    for i in range(4):
         agent.move(UP, 1)
         for j in range(4):
             for k in range(4):
@@ -67,7 +67,7 @@ With the second loop but outside the third loop (tabbed 3 times), code an ``||ag
 ```python
 def walls():
     agent.set_item(PLANKS_ACACIA, 64, 1)
-    for i in range(3):
+    for i in range(4):
         agent.move(UP, 1)
         for j in range(4):
             for k in range(4):
@@ -151,7 +151,7 @@ Go into Minecraft and test out the **house** command.
 ```python
 def walls():
     agent.set_item(PLANKS_ACACIA, 64, 1)
-    for index in range(3):
+    for index in range(4):
         agent.move(UP, 1)
         for index2 in range(4):
             for index3 in range(4):
