@@ -35,15 +35,15 @@ def walls():
 ```
 
 ## Step 4
-Code another ``||loops:for||`` loop that repeats **4** times, and drag it inside the first ``||loops:for||`` loop — beneath the first ``||agent:agent move||``. With the second loop, code an ``||agent:agent turn right||``.
+Code another ``||loops:for||`` loop that repeats **4** times, and drag it inside the first ``||loops:for||`` loop — beneath the first ``||agent:agent move||``. 
 
 ```python
 def walls():
     agent.set_item(PLANKS_ACACIA, 64, 1)
-    for index in range(3):
+    for i in range(3):
         agent.move(UP, 1)
-        for index2 in range(4):
-            agent.turn(RIGHT_TURN)
+        for j in range(4):
+            pass
 ```
 
 ## Step 5
@@ -52,16 +52,31 @@ Code a third ``||loops:for||`` loop, drag it inside the second ``||loops:repeat|
 ```python
 def walls():
     agent.set_item(PLANKS_ACACIA, 64, 1)
-    for index in range(3):
+    for i in range(3):
         agent.move(UP, 1)
-        for index2 in range(4):
-            for index3 in range(4):
+        for j in range(4):
+            for k in range(4):
+                agent.place(DOWN)
+                agent.move(FORWARD, 1)
+            
+```
+
+## Step 6
+With the second loop but outside the third loop (tabbed 3 times), code an ``||agent:agent turn right||``.
+
+```python
+def walls():
+    agent.set_item(PLANKS_ACACIA, 64, 1)
+    for i in range(3):
+        agent.move(UP, 1)
+        for j in range(4):
+            for k in range(4):
                 agent.place(DOWN)
                 agent.move(FORWARD, 1)
             agent.turn(RIGHT_TURN)
 ```
 
-## Step 6
+## Step 7
 Code a new ``||advanced:function||`` and name it **roof**.   
 
 ```python
@@ -69,29 +84,42 @@ def roof():
     pass
 ```
 
-## Step 7
+## Step 8
 Code the agent to ``||agent:set block or item||``, set it to **brick slab**, set the count to **64** and the slot to **1** and drag it into the **roof** ``||functions:function||``. Also, code the agent to ``||agent:move||`` **up by 1**.
 
 ```python
 def roof():
-    agent.set_item(BRICKS_SLAB, 1, 1)
+    agent.set_item(BRICKS_SLAB, 64, 1)
     agent.move(UP, 1)
 ```
 
-## Step 8
-Inside the **roof** ``||functions:function||``, code a ``||loops:for||`` loop and set it to repeat **4** times. Within the loop, code the agent to ``||agent:move||`` **back by 4**, and then code the agent to ``||agent:move||``  **right by 1**.
+## Step 9
+Inside the **roof** ``||functions:function||``, code a ``||loops:for||`` loop and set it to repeat **4** times. 
 	
 ```python
 def roof():
     agent.set_item(BRICKS_SLAB, 64, 1)
     agent.move(UP, 1)
-    for index4 in range(4):
-        agent.move(BACK, 4)
-        agent.move(RIGHT, 1)
+    for m in range(4):
+        pass
 ```
 
-## Step 9
+## Step 10
 Code another ``||loops:for||`` loop and set it to repeat **4** times. Within this loop, add a ``||agent:place down||``, followed by an ``||agent:agent move||`` **forward by 1**. Place this ``||loops:for||`` loop inside the previous loop—above the ``||agent:agent move||`` **back by 4**.
+
+```python
+def roof():
+    agent.set_item(BRICKS_SLAB, 64 1)
+    agent.move(UP, 1)
+    for m in range(4):
+        for n in range(4):
+            agent.place(DOWN)
+            agent.move(FORWARD, 1)
+        
+```
+
+## Step 11
+Within the first loop (tabbed twice), code the agent to ``||agent:move||`` **back by 4**, and then code the agent to ``||agent:move||``  **right by 1**.
 
 ```python
 def roof():
