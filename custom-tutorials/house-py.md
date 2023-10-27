@@ -133,11 +133,12 @@ def roof():
         agent.move(RIGHT, 1)
 ```
 
-## Step 10
-Code an ``||player:on chat||`` command and name it **house**, and have it call both the **walls** and **roof** ``||functions:functions||``.
+## Step 12
+Code an ``||player:on chat||`` command and name it **house**.  First drag in an ``||agent:teleport to player||`` code and then have it call both the **walls** and **roof** ``||functions:functions||``.
 
 ```python
 def on_chat():
+    agent.teleport_to_player()
     walls()
     roof()
 player.on_chat("house", on_chat)
@@ -167,6 +168,7 @@ def roof():
         agent.move(BACK, 4)
         agent.move(RIGHT, 1)
 def on_chat():
+    agent.teleport_to_player()
     walls()
     roof()
 player.on_chat("house", on_chat)
