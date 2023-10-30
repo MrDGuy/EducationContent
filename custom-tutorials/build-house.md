@@ -21,7 +21,10 @@ Drag a ``||blocks:fill with||`` code and change the **GRASS** to **STONE_BRICKS*
 
 ```python
 def base(width3, height3, length3, position3):
-    blocks.fill(STONE_BRICKS, pos(0, 0, 0), pos(0, 0, 0), FillOperation.HOLLOW)
+    blocks.fill(STONE_BRICKS,
+        pos(0, 0, 0),
+        pos(0, 0, 0),
+        FillOperation.HOLLOW)
 ```
 
 ## Step 3
@@ -29,7 +32,10 @@ Delete the first **pos(0,0,0)** code and then drag a ``||positions:p1+p2||`` cod
 
 ```python
 def base(width3, height3, length3, position3):
-    blocks.fill(STONE_BRICKS, positions.add(pos(0,0,0), pos(0,0,0)), pos(0, 0, 0), FillOperation.HOLLOW)
+    blocks.fill(STONE_BRICKS,
+        positions.add(pos(0,0,0), pos(0,0,0)),
+        pos(0, 0, 0),
+        FillOperation.HOLLOW)
 ```
 
 ## Step 4
@@ -37,7 +43,10 @@ Change the first **pos(0, 0, 0)** in the first **positions.add()** to **position
 
 ```python
 def base(width3, height3, length3, position3):
-    blocks.fill(STONE_BRICKS, positions.add(position3, pos(0,0,0)), pos(0, 0, 0), FillOperation.HOLLOW)
+    blocks.fill(STONE_BRICKS,
+        positions.add(position3, pos(0,0,0)),
+        pos(0, 0, 0),
+        FillOperation.HOLLOW)
 ```
 
 ## Step 5
@@ -45,7 +54,10 @@ Change the second **pos(0, 0, 0)** in the first **positions.add()** to **pos(wid
 
 ```python
 def base(width3, height3, length3, position3):
-    blocks.fill(STONE_BRICKS, positions.add(position3, pos(width3 * -1, -1, length3 * -1)), pos(0, 0, 0), FillOperation.HOLLOW)
+    blocks.fill(STONE_BRICKS,
+        positions.add(position3, pos(width3 * -1, -1, length3 * -1)),
+        pos(0, 0, 0),
+        FillOperation.HOLLOW)
 ```
 
 ## Step 6
@@ -53,7 +65,10 @@ Delete the second **pos(0,0,0)** code and then drag a ``||positions:p1+p2||`` co
 
 ```python
 def base(width3, height3, length3, position3):
-    blocks.fill(STONE_BRICKS, positions.add(position3, pos(width3 * -1, -1, length3 * -1)), positions.add(pos(0,0,0), pos(0,0,0)), FillOperation.HOLLOW)
+    blocks.fill(STONE_BRICKS,
+        positions.add(position3, pos(width3 * -1, -1, length3 * -1)),
+        positions.add(pos(0,0,0), pos(0,0,0)),
+        FillOperation.HOLLOW)
 ```
 
 ## Step 7
@@ -61,7 +76,10 @@ Change the first **pos(0, 0, 0)** in the second **positions.add()** to **positio
 
 ```python
 def base(width3, height3, length3, position3):
-    blocks.fill(STONE_BRICKS, positions.add(position3, pos(width3 * -1, -1, length3 * -1)), positions.add(position3, pos(0,0,0)), FillOperation.HOLLOW)
+    blocks.fill(STONE_BRICKS,
+        positions.add(position3, pos(width3 * -1, -1, length3 * -1)),
+        positions.add(position3, pos(0,0,0)),
+        FillOperation.HOLLOW)
 ```
 
 ## Step 8
@@ -69,7 +87,10 @@ Change the second **pos(0, 0, 0)** in the second **positions.add()** to **pos(wi
 
 ```python
 def base(width3, height3, length3, position3):
-    blocks.fill(STONE_BRICKS, positions.add(position3, pos(width3 * -1, -1, length3 * -1)), positions.add(position3, pos(width3, height3, length3)), FillOperation.HOLLOW)
+    blocks.fill(STONE_BRICKS,
+        positions.add(position3, pos(width3 * -1, -1, length3 * -1)),
+        positions.add(position3, pos(width3, height3, length3)),
+        FillOperation.HOLLOW)
 ```
 
 ## Step 9
@@ -77,8 +98,14 @@ Drag a ``||blocks:fill with||`` code and change the **GRASS** to **GLASS** and *
 
 ```python
 def base(width3, height3, length3, position3):
-    blocks.fill(STONE_BRICKS, positions.add(position3, pos(width3 * -1, -1, length3 * -1)), positions.add(position3, pos(width3, height3, length3)), FillOperation.HOLLOW)
-    blocks.fill(GLASS, pos(0, 0, 0), pos(0, 0, 0), FillOperation.HOLLOW)
+    blocks.fill(STONE_BRICKS,
+        positions.add(position3, pos(width3 * -1, -1, length3 * -1)),
+        positions.add(position3, pos(width3, height3, length3)),
+        FillOperation.HOLLOW)
+    blocks.fill(GLASS,
+        pos(0, 0, 0),
+        pos(0, 0, 0),
+        FillOperation.HOLLOW)
 ```
 
 ## Step 10
@@ -86,8 +113,14 @@ Delete the first **pos(0,0,0)** code and then drag a ``||positions:p1+p2||`` cod
 
 ```python
 def base(width3, height3, length3, position3):
-    blocks.fill(STONE_BRICKS, positions.add(position3, pos(width3 * -1, -1, length3 * -1)), positions.add(position3, pos(width3, height3, length3)), FillOperation.HOLLOW)
-    blocks.fill(GLASS, positions.add(pos(0,0,0), pos(0,0,0)), pos(0, 0, 0), FillOperation.HOLLOW)
+    blocks.fill(STONE_BRICKS,
+        positions.add(position3, pos(width3 * -1, -1, length3 * -1)),
+        positions.add(position3, pos(width3, height3, length3)),
+        FillOperation.HOLLOW)
+    blocks.fill(GLASS,
+        positions.add(pos(0,0,0), pos(0,0,0)),
+        pos(0, 0, 0),
+        FillOperation.HOLLOW)
 ```
 
 ## Step 11
@@ -95,8 +128,14 @@ Change the first **pos(0, 0, 0)** in the first **positions.add()** to **position
 
 ```python
 def base(width3, height3, length3, position3):
-    blocks.fill(STONE_BRICKS, positions.add(position3, pos(width3 * -1, -1, length3 * -1)), positions.add(position3, pos(width3, height3, length3)), FillOperation.HOLLOW)
-    blocks.fill(GLASS, positions.add(position3, pos(0,0,0)), pos(0, 0, 0), FillOperation.HOLLOW)
+    blocks.fill(STONE_BRICKS,
+        positions.add(position3, pos(width3 * -1, -1, length3 * -1)),
+        positions.add(position3, pos(width3, height3, length3)),
+        FillOperation.HOLLOW)
+    blocks.fill(GLASS,
+        positions.add(position3, pos(0,0,0)),
+        pos(0, 0, 0),
+        FillOperation.HOLLOW)
 ```
 
 ## Step 12
@@ -104,8 +143,14 @@ Change the second **pos(0, 0, 0)** in the first **positions.add()** to **pos(wid
 
 ```python
 def base(width3, height3, length3, position3):
-    blocks.fill(STONE_BRICKS, positions.add(position3, pos(width3 * -1, -1, length3 * -1)), positions.add(position3, pos(width3, height3, length3)), FillOperation.HOLLOW)
-    blocks.fill(GLASS, positions.add(position3, pos(width3 * -1, 2, length3 * -1 + 3)), pos(0, 0, 0), FillOperation.HOLLOW)
+    blocks.fill(STONE_BRICKS,
+        positions.add(position3, pos(width3 * -1, -1, length3 * -1)),
+        positions.add(position3, pos(width3, height3, length3)),
+        FillOperation.HOLLOW)
+    blocks.fill(GLASS,
+        positions.add(position3, pos(width3 * -1, 2, length3 * -1 + 3)),
+        pos(0, 0, 0),
+        FillOperation.HOLLOW)
 ```
 
 ## Step 13
@@ -113,8 +158,12 @@ Delete the second **pos(0,0,0)** code and then drag a ``||positions:p1+p2||`` co
 
 ```python
 def base(width3, height3, length3, position3):
-    blocks.fill(STONE_BRICKS, positions.add(position3, pos(width3 * -1, -1, length3 * -1)), positions.add(position3, pos(width3, height3, length3)), FillOperation.HOLLOW)
-    blocks.fill(GLASS, positions.add(position3, pos(width3 * -1, 2, length3 * -1)), positions.add(pos(0,0,0), pos(0,0,0)), FillOperation.HOLLOW)
+    blocks.fill(STONE_BRICKS,
+        positions.add(position3, pos(width3 * -1, -1, length3 * -1)),
+        positions.add(position3, pos(width3, height3, length3)),
+        FillOperation.HOLLOW)
+    blocks.fill(GLASS,
+        positions.add(position3, pos(width3 * -1, 2, length3 * -1)), positions.add(pos(0,0,0), pos(0,0,0)), FillOperation.HOLLOW)
 ```
 
 ## Step 14
