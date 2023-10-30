@@ -94,42 +94,42 @@ def roof():
 ```
 
 ## Step 9
-Inside the **roof** ``||functions:function||``, code a ``||loops:for||`` loop and set it to repeat **4** times. 
+Inside the **roof** ``||functions:function||``, code a ``||loops:for||`` loop and set it to repeat **5** times. 
 	
 ```python
 def roof():
     agent.set_item(BRICKS_SLAB, 64, 1)
     agent.move(UP, 1)
-    for m in range(4):
+    for m in range(5):
         pass
 ```
 
 ## Step 10
-Code another ``||loops:for||`` loop and set it to repeat **4** times. Within this loop, add a ``||agent:place down||``, followed by an ``||agent:agent move||`` **forward by 1**. Place this ``||loops:for||`` loop inside the previous loop—above the ``||agent:agent move||`` **back by 4**.
+Code another ``||loops:for||`` loop and set it to repeat **5** times. Within this loop, add a ``||agent:place down||``, followed by an ``||agent:agent move||`` **forward by 1**. Place this ``||loops:for||`` loop inside the previous loop—above the ``||agent:agent move||`` **back by 5**.
 
 ```python
 def roof():
     agent.set_item(BRICKS_SLAB, 64 1)
     agent.move(UP, 1)
-    for m in range(4):
-        for n in range(4):
+    for m in range(5):
+        for n in range(5):
             agent.place(DOWN)
             agent.move(FORWARD, 1)
         
 ```
 
 ## Step 11
-Within the first loop (tabbed twice), code the agent to ``||agent:move||`` **back by 4**, and then code the agent to ``||agent:move||``  **right by 1**.
+Within the first loop (tabbed twice), code the agent to ``||agent:move||`` **back by 5**, and then code the agent to ``||agent:move||``  **right by 1**.
 
 ```python
 def roof():
     agent.set_item(BRICKS_SLAB, 64 1)
     agent.move(UP, 1)
-    for m in range(4):
-        for n in range(4):
+    for m in range(5):
+        for n in range(5):
             agent.place(DOWN)
             agent.move(FORWARD, 1)
-        agent.move(BACK, 4)
+        agent.move(BACK, 5)
         agent.move(RIGHT, 1)
 ```
 
@@ -161,11 +161,11 @@ def walls():
 def roof():
     agent.set_item(BRICKS_SLAB, 64, 1)
     agent.move(UP, 1)
-    for m in range(4):
-        for n in range(4):
+    for m in range(5):
+        for n in range(5):
             agent.place(DOWN)
             agent.move(FORWARD, 1)
-        agent.move(BACK, 4)
+        agent.move(BACK, 5)
         agent.move(RIGHT, 1)
 def on_chat():
     agent.teleport_to_player()
