@@ -151,7 +151,7 @@ def on_chat():
     setup()
     atmosphere()
     zombiepig()
-player.on_chat("jump", on_chat)
+player.on_chat("play", on_chat)
 ```
 
 ## Step 13
@@ -179,5 +179,5 @@ def on_chat():
     setup()
     atmosphere()
     zombiepig()
-player.on_chat("jump", on_chat)
+player.on_chat("play", on_chat)
 ```
