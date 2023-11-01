@@ -25,3 +25,6 @@ Using a for loop inside a for loop build 4 walls that are side length long
 The outer for loop should loop 4 times.  
 The loop inside should loop side times and the agent should place a block down and move forward.  
 At the end of the inside loop have the agent turn left ONLY in the outside loop so the agent only turns left 4 times
+
+## Step 6
+Bring in a on Chat Command code and change it to have a parameter side_length and change the "jump" to "walls"
