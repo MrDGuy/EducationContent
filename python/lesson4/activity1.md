@@ -1,5 +1,5 @@
 ### @explicitHints true
-### @hideIteration true 
+### @hideIteration false 
 # Activity 1 - Animal categorizing.
 
 ```python
