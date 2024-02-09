@@ -1,5 +1,6 @@
 ### @explicitHints true
 
+### @hideIteration false
 # Activity 3 - What is the cats name?
 
 ```python
