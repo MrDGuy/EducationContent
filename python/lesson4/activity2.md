@@ -1,5 +1,7 @@
 ### @explicitHints true
 
+### @hideIteration false
+
 # Activity 2 - Dietary requirement.
 
 ```python
