@@ -7,6 +7,6 @@ Welcome your Agent!
 
 
 ```spy
-loops.onStart()
+
 ```
 
