@@ -12,7 +12,7 @@
 Program the Agent to reach the gold plate. You need to stay on your gold plate, while the Agent needs to stay on the other one. When done, press the **Play** button to compile the code. Go to Minecraft to run your code.
 
 
-```ghost
+```spy
 player.onChat("last", function () {
     agent.move(FORWARD, 1)
     agent.turn(LEFT_TURN)
