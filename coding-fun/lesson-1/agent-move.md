@@ -16,10 +16,10 @@ You can change the number of steps your Agent will move by changing the number i
 
 
 
-```spy
-player.onChat("1", function () {
+```python
+def on_on_chat():
     agent.move(FORWARD, 1)
     agent.turn(LEFT_TURN)
-})
+player.on_chat("1", on_on_chat)
 
 ``` 
