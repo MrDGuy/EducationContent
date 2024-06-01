@@ -13,10 +13,10 @@ Use ``||player:on chat||`` and  ``||agent:agent move||`` commands to program the
 
 
 
-```spy
-player.onChat("up", function () {
+```python
+def on_chat():
     agent.move(FORWARD, 1)
     agent.turn(LEFT_TURN)
-})
+player.on_chat("up", on_chat)
 
 ```  
