@@ -5,7 +5,7 @@
 ### @hideDone false
 ### @flyoutOnly 1
 ### @explicitHints 1
-### @diffs true
+### @diffs false
 # Agent Move: JavaScript
 
 ## Step 1
