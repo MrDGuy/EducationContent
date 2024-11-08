@@ -1,3 +1,11 @@
+### @codeStart players set @s makecode 0
+### @codeStop players set @s makecode 1
+
+### @hideIteration false
+### @hideDone false
+### @flyoutOnly 1
+### @explicitHints 1
+### @diffs true
 # Agent Maze: Blocks
 
 ## Step 1
