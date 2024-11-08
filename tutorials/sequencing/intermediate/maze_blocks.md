@@ -43,7 +43,8 @@ Get an ``||agent:agent place on move||`` block and set it to **true**.  Place it
 
 ```blocks
 player.onChat("side1", function () {  
-    agent.setAssist(PLACE_ON_MOVE, true)  
+    agent.setAssist(PLACE_ON_MOVE, true)
+    agent.setItem(GRASS, 64, 1)
      
 }) 
 ```
@@ -54,7 +55,8 @@ Get an ``||agent:agent move forward||`` and set it to **4**.  Place it inside ``
 
 ```blocks
 player.onChat("side1", function () {  
-    agent.setAssist(PLACE_ON_MOVE, true)  
+    agent.setAssist(PLACE_ON_MOVE, true)
+    agent.setItem(GRASS, 64, 1)  
     agent.move(FORWARD, 4)  
 })  
 ```
@@ -65,7 +67,8 @@ Add an ``||agent:agent turn||`` command and set it to **turn left**. Drag it int
 
 ```blocks
 player.onChat("side1", function () {  
-    agent.setAssist(PLACE_ON_MOVE, true)  
+    agent.setAssist(PLACE_ON_MOVE, true)
+    agent.setItem(GRASS, 64, 1)
     agent.move(FORWARD, 4)  
     agent.turn(LEFT_TURN)  
 })  
@@ -77,7 +80,8 @@ Add another ``||agent:move forward||`` block and set it to **5**.  Place it insi
 
 ```blocks
 player.onChat("side1", function () {  
-    agent.setAssist(PLACE_ON_MOVE, true)  
+    agent.setAssist(PLACE_ON_MOVE, true)
+    agent.setItem(GRASS, 64, 1)
     agent.move(FORWARD, 4)  
     agent.turn(LEFT_TURN)  
     agent.move(FORWARD, 5)  
@@ -90,7 +94,8 @@ Add another ``||agent:agent turn||`` block and set it to **right**.  Place it in
 
 ```blocks
 player.onChat("side1", function () {  
-    agent.setAssist(PLACE_ON_MOVE, true)  
+    agent.setAssist(PLACE_ON_MOVE, true)
+    agent.setItem(GRASS, 64, 1) 
     agent.move(FORWARD, 4)  
     agent.turn(LEFT_TURN)  
     agent.move(FORWARD, 5)
@@ -106,7 +111,8 @@ Right-click on the existing ``||agent:agent move||`` **forward by 5** command an
 
 ```blocks
 player.onChat("side1", function () {  
-    agent.setAssist(PLACE_ON_MOVE, true)  
+    agent.setAssist(PLACE_ON_MOVE, true)
+    agent.setItem(GRASS, 64, 1) 
     agent.move(FORWARD, 4)  
     agent.turn(LEFT_TURN)  
     agent.move(FORWARD, 5)  
@@ -121,7 +127,8 @@ Duplicate the existing ``||agent:place on move||`` block, then drag the duplicat
 
 ```blocks
 player.onChat("side1", function () {  
-    agent.setAssist(PLACE_ON_MOVE, true)  
+    agent.setAssist(PLACE_ON_MOVE, true)
+    agent.setItem(GRASS, 64, 1)
     agent.move(FORWARD, 4)  
     agent.turn(LEFT_TURN)  
     agent.move(FORWARD, 5)  
@@ -145,7 +152,8 @@ Duplicate the existing ``||agent:agent turn||`` **left**, then drag the duplicat
 
 ```blocks
 player.onChat("side1", function () {  
-    agent.setAssist(PLACE_ON_MOVE, true)  
+    agent.setAssist(PLACE_ON_MOVE, true)
+    agent.setItem(GRASS, 64, 1) 
     agent.move(FORWARD, 4)  
     agent.turn(LEFT_TURN)  
     agent.move(FORWARD, 5)  
