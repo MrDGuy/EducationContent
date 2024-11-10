@@ -10,7 +10,9 @@
 
 ## Step 1
 Program the Agent to reach the gold plate. You need to stay on your gold plate, while the Agent needs to stay on the other one. When done, press the **Play** button to compile the code. Go to Minecraft to run your code.
+```typescript
 
+```
 
 ```ghost
 player.onChat("last", function () {
