@@ -1,6 +1,6 @@
 ### @hideIteration false 
 ### @flyoutOnly 1
-### @explicitHints 1
+### @explicitHints 0
 
 
 # Program the Agent to move along the turtle tracks!
@@ -14,7 +14,7 @@ Try using a ``||loops:repeat||`` block to make the code more efficient.
 ## Step 2
 When done, press the **Play** button to compile the code. Don't forget to run your code in Minecraft. 
 
-```spy
+```typescript
 player.onChat("run", function () {
     agent.move(FORWARD, 1)
     agent.turn(LEFT_TURN)
