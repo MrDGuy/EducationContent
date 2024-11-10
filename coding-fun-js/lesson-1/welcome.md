@@ -6,7 +6,7 @@
 Welcome your Agent!
 
 ```typescript
-
+loops.onStart()
 ```
 ```ghost
 loops.onStart()
