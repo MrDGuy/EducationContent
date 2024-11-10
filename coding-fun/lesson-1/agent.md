@@ -6,6 +6,7 @@
 Welcome your Agent!
 
 
-```spy
-
+```ghost
+loops.onStart()
 ```
+
