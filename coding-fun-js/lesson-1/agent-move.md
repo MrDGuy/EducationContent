@@ -15,7 +15,9 @@ Select an ``||player:on chat||`` command and rename it from **run** to **1**. Se
 You can change the number of steps your Agent will move by changing the number inside the ``||agent: agent move||`` block. You also can use an ``||agent: agent turn||`` block to turn the Agent to the left or right.
 
 ```typescript
-
+player.onChat("1", function () {
+    //put the agent commands here.
+})
 ```
 
 ```ghost
