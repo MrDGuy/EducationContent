@@ -13,10 +13,10 @@ Use ``||player:on chat||`` and  ``||agent:agent move||`` commands to program the
 
 
 
-```python
-def on_chat():
+```ghost
+player.onChat("up", function () {
     agent.move(FORWARD, 1)
     agent.turn(LEFT_TURN)
-player.on_chat("up", on_chat)
+})
 
 ```  
