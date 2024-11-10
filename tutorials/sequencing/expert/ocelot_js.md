@@ -4,7 +4,7 @@
 ### @hideIteration false
 ### @hideDone false
 ### @flyoutOnly 1
-### @explicitHints 0
+### @explicitHints 1
 ### @diffs false
 # Ocelot Enclosure: JavaScript
 
