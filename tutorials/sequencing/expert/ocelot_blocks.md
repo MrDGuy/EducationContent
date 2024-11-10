@@ -4,8 +4,8 @@
 ### @hideIteration false
 ### @hideDone false
 ### @flyoutOnly 1
-### @explicitHints 0
-### @diffs true
+### @explicitHints 1
+### @diffs false
 # Ocelot Enclosure: Blocks
 
 ## Step 1
