@@ -2,7 +2,6 @@
 ### @codeStop players set @s makecode 1
 
 ### @hideIteration true 
-### @hideDone false
 ### @flyoutOnly 1
 ### @explicitHints 1
 
@@ -17,10 +16,10 @@ You can change the number of steps your Agent will move by changing the number i
 
 
 
-```python
-def on_chat():
+```ghost
+player.onChat("1", function () {
     agent.move(FORWARD, 1)
     agent.turn(LEFT_TURN)
-player.on_chat("1", on_chat)
+})
 
 ``` 
