@@ -5,7 +5,9 @@
 ## Step 1
 Welcome your Agent!
 
+```typescript
 
+```
 ```ghost
 loops.onStart()
 ```
