@@ -184,6 +184,7 @@
         "tutorials/sequencing/intermediate/maze_blocks.md",
         "tutorials/sequencing/intermediate/maze_py.md",
         "tutorials/sequencing/intermediate/maze_js.md",
+        "tutorials/sequencing/novice/move_blocks.md",
         "tutorials/sequencing/novice/move_py.md",
         "tutorials/sequencing/novice/move_js.md",
         "tutorials/conditional_loops/expert/spiral_blocks.md",
