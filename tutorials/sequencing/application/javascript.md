@@ -5,7 +5,7 @@
 ### @hideDone false
 ### @flyoutOnly 1
 ### @explicitHints 0
-### @diffs true
+### @diffs false
 #Tutorial
 
 ## Step 1
