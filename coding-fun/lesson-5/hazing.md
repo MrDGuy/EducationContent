@@ -13,7 +13,7 @@ The Agent needs to set **tripwire** so that wolves won't get in. Set the ``||age
 #### ~ tutorialhint
 Remember to use **not** in your condition. 
 
-```blocks
+```typescript
 player.onChat("hazing", function () {
     agent.setItem(TRIPWIRE, 64, 1)
     while (!(agent.detect(AgentDetection.Block, FORWARD))) {
