@@ -14,7 +14,7 @@ Use the ``||loops:while||`` block and drop a condition inside the ``||loops:whil
 
 #### ~ tutorialhint
 
-```blocks
+```typescript
 player.onChat("hazing", function () {
     agent.setItem(TRIPWIRE, 64, 1)
     while (!(agent.detect(AgentDetection.Block, FORWARD))) {
@@ -26,7 +26,7 @@ player.onChat("hazing", function () {
 ## Step 3
 Add ``||agent: agent place||`` and ``||agent: agent move||`` blocks inside the ``||loops:while||`` block. 
 
-```blocks
+```typescript
 player.onChat("run", function () {
     agent.setItem(TRIPWIRE, 64, 1)
     while (!(agent.detect(AgentDetection.Block, FORWARD))) {
