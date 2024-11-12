@@ -2,7 +2,7 @@
 ### @codeStop players set @s makecode 1
 
 ### @hideIteration true
-### @explicitHints 1
+### @explicitHints 0
 
 
 # Make the area pretty!
