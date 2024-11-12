@@ -1,7 +1,7 @@
 ### @hideIteration false 
 ### @flyoutOnly 1
 ### @explicitHints 0
-
+### @hideDone false
 
 # Program the Agent to move along the turtle tracks!
 
