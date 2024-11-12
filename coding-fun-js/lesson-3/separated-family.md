@@ -14,7 +14,7 @@ Program the Agent to build a bridge across the chasm in the ice. Ensure that the
 Don't forget to use **not** in your **while** loop. Think where you want the Agent to place blocks. 
 
 
-```spy
+```typescript
 player.onChat("family", function () {
     agent.setItem(PLANKS_OAK, 64, 1)
     agent.move(FORWARD, 1)
