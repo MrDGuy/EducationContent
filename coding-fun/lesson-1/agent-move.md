@@ -4,6 +4,7 @@
 ### @hideIteration true 
 ### @flyoutOnly 1
 ### @explicitHints 1
+### @hideDone false
 
 
 # Program the Agent to move to the gold plate!
