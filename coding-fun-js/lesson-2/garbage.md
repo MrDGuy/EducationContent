@@ -4,7 +4,7 @@
 ### @hideIteration true 
 ### @flyoutOnly 1
 ### @explicitHints 0
-
+### @hideDone false
 
 # Program the Agent to collect all the garbage!
 
