@@ -16,6 +16,23 @@ Look at the coding snippets shapes when you snap them together. Use ``||agent:ag
 ```typescript
 player.onChat("cub", function () {
     while (agent.detect(AgentDetection.Block, FORWARD)) {
+    	
+    }
+})
+```
+
+
+```template
+player.onChat("cub", function () {
+    while (agent.detect(AgentDetection.Block, FORWARD)) {
+    	
+    }
+})
+```
+
+```ghost
+player.onChat("cub", function () {
+    while (agent.detect(AgentDetection.Block, FORWARD)) {
         agent.destroy(FORWARD)
         agent.move(FORWARD, 1)
         agent.destroy(UP)
