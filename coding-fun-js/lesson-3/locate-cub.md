@@ -3,7 +3,7 @@
 
 ### @hideIteration true 
 ### @explicitHints 1
-
+### @hideDone false
 
 # Locate the cub!
 
