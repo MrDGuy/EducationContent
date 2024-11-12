@@ -13,6 +13,7 @@ Create an ``||player:on chat||`` command and name it **fence**.
 
 ```blocks
 player.onChat("fence", function () {
+    
 })
 ```
 
@@ -33,6 +34,7 @@ Get a ``||builder:move||`` and set it to **forward by 21**. Drag it into the ``|
 
 ```blocks
 player.onChat("fence", function () {
+    builder.teleportTo(positions.createWorld(-695, 9, 880)))
     builder.face(WEST)
     builder.move(FORWARD, 21)
 
@@ -45,6 +47,7 @@ Add a ``||builder:turn||`` and set it to **turn right**. Drag it into the ``||pl
 
 ```blocks
 player.onChat("fence", function () {
+    builder.teleportTo(positions.createWorld(-695, 9, 880)))
     builder.face(WEST)
     builder.move(FORWARD, 21)
     builder.turn(RIGHT_TURN)
@@ -60,6 +63,7 @@ Drag the ``||builder: turn||`` into the ``||player:on chat||`` **fence** command
 
 ```blocks
 player.onChat("fence", function () {
+    builder.teleportTo(positions.createWorld(-695, 9, 880)))
     builder.face(WEST)
     builder.move(FORWARD, 21)
     builder.turn(RIGHT_TURN)
@@ -74,6 +78,7 @@ Add another ``||builder:builder move||`` command and set it to **forward by 21**
 
 ```blocks
 player.onChat("fence", function () {
+    builder.teleportTo(positions.createWorld(-695, 9, 880)))
     builder.face(WEST)
     builder.move(FORWARD, 21)
     builder.turn(RIGHT_TURN)
@@ -91,6 +96,7 @@ To place fencing along the perimeter of the rectangle, add a ``||builder:builder
 
 ```blocks
 player.onChat("fence", function () {
+    builder.teleportTo(positions.createWorld(-695, 9, 880)))
     builder.face(WEST)
     builder.move(FORWARD, 21)
     builder.turn(RIGHT_TURN)
@@ -109,6 +115,7 @@ After completing the fence, get a ``||mobs:spawn animal||`` and select **ocelot*
 
 ```blocks
 player.onChat("fence", function () {
+    builder.teleportTo(positions.createWorld(-695, 9, 880)))
     builder.face(WEST)
     builder.move(FORWARD, 21)
     builder.turn(RIGHT_TURN)
@@ -131,6 +138,7 @@ To spawn a second ocelot into the fence, duplicate the entire ``||mobs:spawn ani
 
 ```blocks
 player.onChat("fence", function () {
+    builder.teleportTo(positions.createWorld(-695, 9, 880)))
     builder.face(WEST)
     builder.move(FORWARD, 21)
     builder.turn(RIGHT_TURN)
@@ -157,6 +165,7 @@ Duplicate the entire **ocelot** and change the animal to **wolf**. Duplicate the
 
 ```blocks
 player.onChat("fence", function () {
+    builder.teleportTo(positions.createWorld(-695, 9, 880)))
     builder.face(WEST)
     builder.move(FORWARD, 21)
     builder.turn(RIGHT_TURN)
