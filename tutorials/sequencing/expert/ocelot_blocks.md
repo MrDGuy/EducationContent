@@ -23,7 +23,7 @@ Go to the **advanced** section of the toolbox and find ``||builder: builder||``.
 
 ```blocks
 player.onChat("fence", function () {
-    builder.teleportTo(positions.createWorld(-695, 9, 880)))
+    builder.teleportTo(positions.createWorld(-695, 9, 880))
     builder.face(WEST)
 })
 ```
