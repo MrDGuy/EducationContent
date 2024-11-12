@@ -3,7 +3,7 @@
 
 ### @hideIteration false 
 ### @explicitHints 1
-
+### @hideDone false
 
 # Higher Ground!
 
