@@ -1,9 +1,9 @@
 ### @codeStart players set @s makecode 0
 ### @codeStop players set @s makecode 1
 
-### @hideIteration true 
+### @hideIteration false 
 ### @explicitHints 1
-
+### @hideDone false
 
 # Locate the cub!
 
