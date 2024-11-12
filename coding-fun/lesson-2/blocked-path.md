@@ -1,9 +1,10 @@
 ### @codeStart players set @s makecode 0
 ### @codeStop players set @s makecode 1
 
-### @hideIteration true 
+### @hideIteration false 
 ### @flyoutOnly 1
 ### @explicitHints 1
+### @hideDone false
 
 
 # Program the Agent to move along the turtle tracks & destroy obstacles!
