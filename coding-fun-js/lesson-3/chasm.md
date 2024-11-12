@@ -3,7 +3,7 @@
 
 ### @hideIteration true 
 ### @explicitHints 0
-
+### @hideDone false
 
 # The great chasm!
 
