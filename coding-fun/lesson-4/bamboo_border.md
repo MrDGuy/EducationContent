@@ -11,7 +11,7 @@
 ## Step 1
 There is a starter code that we prepared for you.  Try running it first. The final goal is to plant bamboo along **4** sides of the panda's plot. 
 
-```typescript
+```blocks
 player.onChat("bamboo", function () {
     agent.setItem(BAMBOO, 64, 1)
     for (let index = 0; index < 16; index++) {
