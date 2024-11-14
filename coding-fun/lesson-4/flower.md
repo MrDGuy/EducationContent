@@ -13,7 +13,7 @@ You need to plant **14 dandelions** along **4** sides of the hideaway. The Agent
 #### ~ tutorialhint 
 Don't forget to select a count for ``||agent:agent set block||`` command. 
 
-```typescript
+```blocks
 player.onChat("flower", function () {
     for (let index = 0; index < 4; index++) {
         for (let index = 0; index < 14; index++) {
