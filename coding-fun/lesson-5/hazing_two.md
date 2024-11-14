@@ -4,7 +4,7 @@
 ### @hideIteration false 
 ### @flyoutOnly 1
 ### @explicitHints 1
-
+### @hideDone false
 
 # Hazing Two
 
