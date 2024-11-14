@@ -12,9 +12,6 @@ Program the Agent to build a bridge across the chasm in the ice. Ensure that the
 
 #### ~ tutorialhint 
 Don't forget to use **not** in your **while** loop. Think where you want the Agent to place blocks. 
-```typescript
-//Write your code to finish the activity
-```
 
 
 ```ghost
