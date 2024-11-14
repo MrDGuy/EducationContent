@@ -14,7 +14,7 @@ Program the Agent to construct an **oak fence**. The agent needs to place **oak 
 Ensure that the Agent places blocks on the right and destroys blocks on the left. 
 
 
-```typescript
+```blocks
 player.onChat("fence", function () {
     agent.setItem(OAK_FENCE, 64, 1)
     for (let index = 0; index < 17; index++) {
