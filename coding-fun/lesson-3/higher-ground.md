@@ -19,9 +19,7 @@ Program the Agent to move **down** from the tower and construct **ladder** that 
 #### ~ tutorialhint 
 Don't forget to select **64** blocks of **ladder** in the Agent's inventory using ``||agent: agent set block||``, so that the Agent can place the ladder. 
 
-```blocks
-//Write the code to complete this activity
-``` 
+
 
 ```ghost
 player.onChat("tower", function () {
