@@ -13,7 +13,7 @@ The Agent needs to place **2** layers of **9** blocks of **iron bars**. There ar
 
 #### ~ tutorialhint
 At the end you will have **3** ``||loops:repeat|`` commands nested inside each other. Make sure that the Agent has more than 64 blocks in its inventory!
-```typescript
+```blocks
 player.onChat("chicken", function () {
     for (let index = 0; index < 2; index++) {
         agent.setItem(IRON_BARS, 1, 1)
