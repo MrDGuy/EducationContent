@@ -1,9 +1,9 @@
 ### @codeStart players set @s makecode 0
 ### @codeStop players set @s makecode 1
 
-### @hideIteration true 
+### @hideIteration false 
 ### @explicitHints 0
-
+### @hideDone false
 
 # Secure the Area
 
