@@ -7,6 +7,7 @@
     },
     "files": [
         "README.md",
+        "custom-tutorials/agent-build.md",
         "agent_trials/agent_move_JS.md",
         "agent_trials/agent_move_blocks.md",
         "agent_trials/agent_move_python.md",
