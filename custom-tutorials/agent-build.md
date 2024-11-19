@@ -6,7 +6,7 @@
 ### @explicitHints 0
 ### @diffs false
 
-# Custom House: Python
+# Your own creation!
 
 Using the ``||agent:agent||``, ``||builder:builder||``, and the ``||blocks:blocks||`` categories, build a creation on your space.
 
