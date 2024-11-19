@@ -5,6 +5,7 @@
 ### @flyoutOnly 0
 ### @explicitHints 0
 ### @diffs false
+### @hideDone true
 
 # Your own creation!
 
