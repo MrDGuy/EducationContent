@@ -2,12 +2,14 @@
 ### @codeStop players set @s makecode 1
 
 ### @hideIteration false 
-### @flyoutOnly 1
+### @flyoutOnly 0
 ### @explicitHints 0
 ### @diffs true
 
 # Template Tutorial
 
+## Code Your Project
+Code an ``||agent:agent||`` and move and build with the agent. 
 ```typescript
 player.onChat("run", function () {
 	
@@ -51,59 +53,55 @@ player.onChat("reset", function () {
 })
 player.onChat("xyzabcdef", function (num1, num2) {
     player.teleport(pos(0, 0, 0))
-    player.position()
-    player.say(":)")
+    player.say(agent.getOrientation())
     blocks.place(GRASS, pos(0, 0, 0))
-    blocks.fill(GRASS, pos(0, 0, 0), pos(0, 0, 0), FillOperation.Replace)
-    mobs.spawn(CHICKEN, pos(0, 0, 0))
-    mobs.monster(ZOMBIE)
+    blocks.fill(
+    GRASS,
+    posLocal(0, 0, 0),
+    world(0, 0, 0),
+    FillOperation.Replace
+    )
+    blocks.fill(
+    GRASS,
+    agent.getPosition(),
+    pos(0, 0, 0),
+    FillOperation.Replace
+    )
+    mobs.spawn(mobs.monster(ZOMBIE), positions.add(
+    randpos(
+    pos(0, 0, 0),
+    pos(0, 0, 0)
+    ),
+    pos(0, 0, 0)
+    ))
     agent.teleportToPlayer()
     agent.move(FORWARD, 1)
-    agent.getPosition()
     agent.place(FORWARD)
     agent.interact(FORWARD)
     agent.destroy(FORWARD)
     agent.till(FORWARD)
     agent.collectAll()
     agent.collect(IRON_SHOVEL)
-    agent.inspectBlock(FORWARD)
-    agent.detect(AgentDetection.Block, FORWARD)
+    player.say(agent.inspectBlock(FORWARD))
     agent.setSlot(1)
     agent.setItem(GRASS, 1, 1)
-    agent.getItemCount(1)
-    agent.getItemDetail(1)
-    posCamera(0, 0, 0)
-    pos(0, 0, 0)
-    posLocal(0, 0, 0)
-    world(0, 0, 0)
-    positions.add(pos(0, 0, 0), pos(0, 0, 0))
-    positions.equals(world(0, 0, 0), world(0, 0, 0))
-    randpos(pos(0, 0, 0), pos(0, 0, 0))
-    myPosition.getValue(Axis.X)
-    myPosition.toWorld()
-    agent.turn(TurnDirection.Left)
-    loops.pause(100)
-
-    for (let i = 0; i < 5; i++) {
-        
+    player.say(agent.getItemCount(1))
+    player.say(agent.getItemDetail(1))
+    for (let index = 0; index < 5; index++) {
+    	
     }
-
     while (true) {
-        
+    	break;
     }
-    if (true) {
-        
+    agent.turn(LEFT_TURN)
+    loops.pause(100)
+    if (agent.detect(AgentDetection.Block, FORWARD)) {
+    	
     }
-
-    if (true) {
-        
+    if (agent.detect(AgentDetection.Block, FORWARD) && (!(agent.detect(AgentDetection.Block, FORWARD)) || agent.detect(AgentDetection.Block, FORWARD))) {
+    	
     } else {
-        
+    	
     }
-
-    true && true
-
-    true || false
-    randint(0, 10)
 })
 ```
