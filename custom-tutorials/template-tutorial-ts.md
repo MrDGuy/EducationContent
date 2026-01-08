@@ -8,6 +8,11 @@
 
 # Template Tutorial
 
+```typescript
+player.onChat("run", function () {
+	
+})
+```
 
 
 ```ghost
