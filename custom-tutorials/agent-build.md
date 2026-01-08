@@ -11,6 +11,11 @@
 
 Using the ``||agent:agent||``, ``||builder:builder||``, and the ``||blocks:blocks||`` categories, build a creation on your space.
 
+```typescript
+    player.onChat("run", function () {
+    }
+```
+
 ```ghost
 let number = 0
 player.onChat("run", function () {
