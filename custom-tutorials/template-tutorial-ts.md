@@ -9,7 +9,7 @@
 # Template Tutorial
 
 ## Code Your Project
-Move and build with an ``||agent:agent||`` 
+Move and build with an ``||agent:agent||`` or ``||blocks:block||`` code.
 ```typescript
 player.onChat("run", function () {
 	
