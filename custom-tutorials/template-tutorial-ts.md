@@ -94,6 +94,14 @@ player.onChat("xyzabcdef", function (num1, num2) {
     	break;
     }
     agent.turn(LEFT_TURN)
+	agent.turnLeft()
+	agent.turnRight()
+	let x = randint(1,100);
+	let y = randint(1,100);
+	if(!x==5||y!==5&&x>50)
+	{
+
+	}
     loops.pause(100)
     if (agent.detect(AgentDetection.Block, FORWARD)) {
     	
