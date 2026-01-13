@@ -57,6 +57,9 @@ player.onChat("xyzabcdef", function (num1, num2) {
     pos(0, 0, 0)
     ))
     agent.teleportToPlayer()
+	agent.teleport(pos(0, 0, 0), WEST)
+    count = agent.getItemCount(1)
+    agent.setAssist(PLACE_ON_MOVE, false)
     agent.move(FORWARD, 1)
     agent.place(FORWARD)
     agent.interact(FORWARD)
@@ -67,7 +70,6 @@ player.onChat("xyzabcdef", function (num1, num2) {
     player.say(agent.inspectBlock(FORWARD))
     agent.setSlot(1)
     agent.setItem(GRASS, 1, 1)
-    player.say(agent.getItemCount(1))
     player.say(agent.getItemDetail(1))
     for (let index = 0; index < 5; index++) {
     	
