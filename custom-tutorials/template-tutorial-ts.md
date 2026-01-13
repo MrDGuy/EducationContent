@@ -17,7 +17,7 @@ player.onChat("run", function () {
 ```
 
 
-```ghost
+```customts
 player.onChat("reset", function() {
     let playerGround = positions.groundPosition(player.position())
     let x = playerGround.getValue(Axis.X);
@@ -32,8 +32,10 @@ player.onChat("reset", function() {
     blocks.fill(STONE, world(x - 32, y - 6, z - 32), world(x + 32, y - 10, z + 32), FillOperation.Replace);
     blocks.fill(STONE, world(x - 32, y - 11, z - 32), world(x + 32, y - 15, z + 32), FillOperation.Replace);
 })
-
+```
+```ghost
 player.onChat("xyzabcdef", function (num1, num2) {
+	let playerGround = positions.groundPosition(player.position())
     player.teleport(pos(0, 0, 0))
     player.say(agent.getOrientation())
     blocks.place(GRASS, pos(0, 0, 0))
