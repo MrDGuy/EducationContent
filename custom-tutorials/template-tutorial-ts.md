@@ -18,39 +18,21 @@ player.onChat("run", function () {
 
 
 ```ghost
-player.onChat("reset", function () {
-    // 1) Bring Agent back to the player
-    agent.teleportToPlayer()
-
-    // 2) Get player block position
-    const p = player.position()
-    const x = p.getValue(Axis.X)
-    const y = p.getValue(Axis.Y)
-    const z = p.getValue(Axis.Z)
-
-    // 3) Restore the ground column beneath the player to Tunneler's Dream layers
-    //    y-1: grass
-    blocks.place(GRASS, pos(x, y - 1, z))
-
-    //    y-2 .. y-6: 5 layers of dirt
-    blocks.fill(
-        DIRT,
-        pos(x, y - 2, z),
-        pos(x, y - 6, z),
-        FillOperation.Replace
-    )
-
-    //    y-7: stone (start of the deep stone layer)
-    blocks.place(STONE, pos(x, y - 7, z))
-
-    // 4) Clear blocks above the player (air above "ground level" at their spot)
-    blocks.fill(
-        AIR,
-        pos(x, y, z),
-        pos(x, y + 25, z),
-        FillOperation.Replace
-    )
+player.onChat("reset", function() {
+    let playerGround = positions.groundPosition(player.position())
+    let x = playerGround.getValue(Axis.X);
+    let y = 173;
+    let z = playerGround.getValue(Axis.Z);
+    blocks.fill(AIR, world(x - 32, y, z - 32), world(x + 32, y + 5, z + 32), FillOperation.Replace);
+    blocks.fill(AIR, world(x - 32, y+6, z - 32), world(x+32, y+11, z+32), FillOperation.Replace);
+    blocks.fill(AIR, world(x - 32, y + 12, z - 32), world(x + 32, y + 17, z + 32), FillOperation.Replace);
+    blocks.fill(AIR, world(x - 32, y + 18, z - 32), world(x + 32, y + 23, z + 32), FillOperation.Replace);
+    blocks.fill(GRASS, world(x - 32, y-1, z - 32), world(x + 32, y-1, z + 32), FillOperation.Replace);
+    blocks.fill(DIRT, world(x - 32, y-2, z - 32), world(x + 32, y-5, z + 32), FillOperation.Replace);
+    blocks.fill(STONE, world(x - 32, y - 6, z - 32), world(x + 32, y - 10, z + 32), FillOperation.Replace);
+    blocks.fill(STONE, world(x - 32, y - 11, z - 32), world(x + 32, y - 15, z + 32), FillOperation.Replace);
 })
+
 player.onChat("xyzabcdef", function (num1, num2) {
     player.teleport(pos(0, 0, 0))
     player.say(agent.getOrientation())
