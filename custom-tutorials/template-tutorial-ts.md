@@ -36,6 +36,7 @@ player.onChat("reset", function() {
 ```ghost
 player.onChat("xyzabcdef", function (num1, num2) {
 	let playerGround = positions.groundPosition(player.position())
+	let firstPosition = pos(0,0,0);
     player.teleport(pos(0, 0, 0))
 	let myPosition = player.position()
 	let newPosition = positions.add(
