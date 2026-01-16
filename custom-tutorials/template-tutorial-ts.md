@@ -37,6 +37,12 @@ player.onChat("reset", function() {
 player.onChat("xyzabcdef", function (num1, num2) {
 	let playerGround = positions.groundPosition(player.position())
     player.teleport(pos(0, 0, 0))
+	let myPosition = player.position()
+	let newPosition = positions.add(
+    	pos(0, 0, 0),
+    	pos(0, 0, 0)
+    )
+    myPosition.getValue(Axis.X);
     player.say(agent.getOrientation())
     blocks.place(GRASS, pos(0, 0, 0))
     blocks.fill(
