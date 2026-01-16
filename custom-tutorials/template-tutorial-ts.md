@@ -45,6 +45,7 @@ player.onChat("xyzabcdef", function (num1, num2) {
     myPosition.getValue(Axis.X);
     player.say(agent.getOrientation())
     blocks.place(GRASS, pos(0, 0, 0))
+	let blockType = blocks.blockByName("IRON_SHOVEL");
     blocks.fill(
     GRASS,
     posLocal(0, 0, 0),
